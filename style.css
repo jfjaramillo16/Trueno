@@ -30,7 +30,6 @@ body {
     user-select: none;
 }
 
-/* Scrollbar fina */
 ::-webkit-scrollbar {
     width: 4px;
 }
@@ -117,7 +116,7 @@ body {
     gap: 2px;
 }
 
-/* Botones de las pistas */
+/* Botones de las canciones */
 .track-item {
     width: 100%;
     text-align: left;
@@ -240,7 +239,7 @@ body {
     z-index: 20;
 }
 
-/* Reproductor Flotante Inferior */
+/* Reproductor Flotante */
 .floating-player {
     position: fixed;
     bottom: 16px;
@@ -258,6 +257,7 @@ body {
     align-items: center;
     justify-content: space-between;
     z-index: 50;
+    overflow: hidden;
 }
 
 .player-info {
@@ -356,18 +356,22 @@ body {
     transform: scale(0.95);
 }
 
-/* Ocultar el iframe de YouTube para que funcione como motor de audio */
-#hidden-youtube-player {
+.progress-container {
     position: absolute;
-    top: -9999px;
-    left: -9999px;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-    pointer-events: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Responsivo */
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background-color: var(--accent-yellow);
+    transition: width 0.1s linear;
+}
+
 @media (max-width: 768px) {
     .setlist-container {
         flex-direction: column;
