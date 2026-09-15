@@ -4,16 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRUENO | Turr4zo World Tour</title>
+    <title>TRUENO | Turr4zo World Tour - Para Xi</title>
     <!-- Tipografías urbanas oficiales del poster -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- ?v=3 para forzar la actualización de caché -->
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
+
+    <!-- Tarjeta de Dedicatoria Especial para Xio -->
+    <section class="dedication-card">
+        <div class="badge-tour">TOUR READY</div>
+        <h2>¡Bienvenida a tu primer concierto, Xi! ⚡</h2>
+        <p>
+            Te preparé esta web para que te aprendas todo el setlist de <strong>Trueno</strong> de memoria y cantemos
+            cada barra sin fallar.
+        </p>
+    </section>
 
     <!-- Contenedor Principal / Poster -->
     <main class="poster-card">
@@ -46,19 +57,19 @@
 
         </div>
 
-        <!-- Pie del poster -->
+        <!-- Pie del poster personalizado -->
         <footer class="poster-footer">
-            <span>@truenodata</span>
+            <span>Hecho con flow para el primer concierto de Xio • @truenodata</span>
         </footer>
     </main>
 
     <!-- Barra Reproductor Flotante Inferior -->
     <div class="floating-player">
         <div class="player-info">
-            <div id="track-number" class="badge">4</div>
+            <div id="track-number" class="badge">1</div>
             <div class="meta">
-                <strong id="track-title">REAL GANGSTA LOVE</strong>
-                <small>Trueno • Turr4zo World Tour</small>
+                <strong id="track-title">CON EL COMBO</strong>
+                <small>Trueno • Para Xi</small>
             </div>
         </div>
 
@@ -78,7 +89,8 @@
         <audio id="audio-player"></audio>
     </div>
 
-    <script src="app.js"></script>
+    <!-- Script con versionado para saltar caché -->
+    <script src="app.js?v=3"></script>
 </body>
 
 </html>
