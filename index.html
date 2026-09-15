@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUENO | Turr4zo World Tour</title>
+    <!-- Tipografías urbanas oficiales del poster -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Contenedor Principal / Poster -->
+    <main class="poster-card">
+
+        <!-- Encabezado del Tour -->
+        <header class="poster-header">
+            <h1 class="poster-title">TRUENO</h1>
+            <p class="poster-subtitle">TURR4ZO WORLD TOUR</p>
+        </header>
+
+        <!-- Cuerpo del Setlist -->
+        <div class="setlist-container">
+
+            <!-- Columna Izquierda (1-15) -->
+            <section class="setlist-col left-col">
+                <h2 class="col-heading">SETLIST</h2>
+                <div id="col-left" class="track-list"></div>
+            </section>
+
+            <!-- Imagen Central de Trueno -->
+            <div class="artist-stage">
+                <img src="trueno_card.jpg" alt="Trueno" class="artist-image">
+            </div>
+
+            <!-- Columna Derecha (16-29) -->
+            <section class="setlist-col right-col">
+                <div class="heading-spacer"></div>
+                <div id="col-right" class="track-list"></div>
+            </section>
+
+        </div>
+
+        <!-- Pie del poster -->
+        <footer class="poster-footer">
+            <span>@truenodata</span>
+        </footer>
+    </main>
+
+    <!-- Barra Reproductor Flotante Inferior -->
+    <div class="floating-player">
+        <div class="player-info">
+            <div id="track-number" class="badge">4</div>
+            <div class="meta">
+                <strong id="track-title">REAL GANGSTA LOVE</strong>
+                <small>Trueno • Turr4zo World Tour</small>
+            </div>
+        </div>
+
+        <!-- Controles -->
+        <div class="player-controls">
+            <button id="btn-prev" class="btn-ctrl" title="Anterior">⏮</button>
+            <button id="btn-play" class="btn-play" title="Reproducir">▶</button>
+            <button id="btn-next" class="btn-ctrl" title="Siguiente">⏭</button>
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="progress-bar-wrapper">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <!-- Elemento Audio Oculto -->
+        <audio id="audio-player"></audio>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
