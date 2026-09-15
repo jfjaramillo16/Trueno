@@ -383,4 +383,50 @@ body {
     .poster-card {
         padding: 24px 16px;
     }
+        /* =======================================================
+       DEDICATORIA PARA XI
+       ======================================================= */
+        .dedication-card {
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 20px;
+            background: rgba(26, 26, 26, 0.85);
+            border: 1px solid rgba(250, 204, 21, 0.35);
+            border-radius: 18px;
+            padding: 16px 24px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+    
+        .dedication-card .badge-tour {
+            display: inline-block;
+            background-color: var(--accent-yellow, #facc15);
+            color: #000;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+    
+        .dedication-card h2 {
+            font-family: var(--font-inter, sans-serif);
+            font-size: clamp(1.1rem, 3vw, 1.35rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+    
+        .dedication-card p {
+            font-size: 0.85rem;
+            color: #a3a3a3;
+            line-height: 1.4;
+        }
+    
+        .dedication-card strong {
+            color: var(--accent-yellow, #facc15);
+        }
 }
