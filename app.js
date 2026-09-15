@@ -1,36 +1,36 @@
 const songs = [
-    { id: 1, title: "CON EL COMBO", src: "songs/01.mp3" },
-    { id: 2, title: "Atrevido", src: "songs/02.mp3" },
-    { id: 3, title: "Bzrp Freestyle Sessions", src: "songs/03.mp3" },
-    { id: 4, title: "REAL GANGSTA LOVE", src: "songs/04.mp3" },
-    { id: 5, title: "1000 HORAS", src: "songs/05.mp3" },
-    { id: 6, title: "Mamichula", src: "songs/06.mp3" },
-    { id: 7, title: "RAIN IV", src: "songs/07.mp3" },
-    { id: 8, title: "FEEL ME??", src: "songs/08.mp3" },
-    { id: 9, title: "GRILLZ", src: "songs/09.mp3" },
-    { id: 10, title: "FRESH", src: "songs/10.mp3" },
-    { id: 11, title: "90s", src: "songs/11.mp3" },
-    { id: 12, title: "ESTILO SUDAKA", src: "songs/12.mp3" },
-    { id: 13, title: "TRANKY FUNKY", src: "songs/13.mp3" },
-    { id: 14, title: "THE ROOF IS ON FIRE", src: "songs/14.mp3" },
-    { id: 15, title: "PITY IN THE SKY", src: "songs/15.mp3" },
-    { id: 16, title: "ZOMBI", src: "songs/16.mp3" },
-    { id: 17, title: "DELIVERY FREESTYLE", src: "songs/17.mp3" },
-    { id: 18, title: "ARGENTINA", src: "songs/18.mp3" },
-    { id: 19, title: "PUMAS", src: "songs/19.mp3" },
-    { id: 20, title: "TIERRA ZANTA", src: "songs/20.mp3" },
-    { id: 21, title: "Azul y Oro", src: "songs/21.mp3" },
-    { id: 22, title: "URUGUAY", src: "songs/22.mp3" },
-    { id: 23, title: "X UNAS LLANTAS", src: "songs/23.mp3" },
-    { id: 24, title: "Ñeri", src: "songs/24.mp3" },
-    { id: 25, title: "BAILANDO SOLA", src: "songs/25.mp3" },
-    { id: 26, title: "TURRAZO", src: "songs/26.mp3" },
-    { id: 27, title: "FUCK EL POLICE", src: "songs/27.mp3" },
-    { id: 28, title: "VIOLENTO", src: "songs/28.mp3" },
-    { id: 29, title: "DANCE CRIP", src: "songs/29.mp3" }
+    { id: 1, title: "CON EL COMBO", src: "./songs/01.mp3" },
+    { id: 2, title: "Atrevido", src: "./songs/02.mp3" },
+    { id: 3, title: "Bzrp Freestyle Sessions", src: "./songs/03.mp3" },
+    { id: 4, title: "REAL GANGSTA LOVE", src: "./songs/04.mp3" },
+    { id: 5, title: "1000 HORAS", src: "./songs/05.mp3" },
+    { id: 6, title: "Mamichula", src: "./songs/06.mp3" },
+    { id: 7, title: "RAIN IV", src: "./songs/07.mp3" },
+    { id: 8, title: "FEEL ME??", src: "./songs/08.mp3" },
+    { id: 9, title: "GRILLZ", src: "./songs/09.mp3" },
+    { id: 10, title: "FRESH", src: "./songs/10.mp3" },
+    { id: 11, title: "90s", src: "./songs/11.mp3" },
+    { id: 12, title: "ESTILO SUDAKA", src: "./songs/12.mp3" },
+    { id: 13, title: "TRANKY FUNKY", src: "./songs/13.mp3" },
+    { id: 14, title: "THE ROOF IS ON FIRE", src: "./songs/14.mp3" },
+    { id: 15, title: "PITY IN THE SKY", src: "./songs/15.mp3" },
+    { id: 16, title: "ZOMBI", src: "./songs/16.mp3" },
+    { id: 17, title: "DELIVERY FREESTYLE", src: "./songs/17.mp3" },
+    { id: 18, title: "ARGENTINA", src: "./songs/18.mp3" },
+    { id: 19, title: "PUMAS", src: "./songs/19.mp3" },
+    { id: 20, title: "TIERRA ZANTA", src: "./songs/20.mp3" },
+    { id: 21, title: "Azul y Oro", src: "./songs/21.mp3" },
+    { id: 22, title: "URUGUAY", src: "./songs/22.mp3" },
+    { id: 23, title: "X UNAS LLANTAS", src: "./songs/23.mp3" },
+    { id: 24, title: "Ñeri", src: "./songs/24.mp3" },
+    { id: 25, title: "BAILANDO SOLA", src: "./songs/25.mp3" },
+    { id: 26, title: "TURRAZO", src: "./songs/26.mp3" },
+    { id: 27, title: "FUCK EL POLICE", src: "./songs/27.mp3" },
+    { id: 28, title: "VIOLENTO", src: "./songs/28.mp3" },
+    { id: 29, title: "DANCE CRIP", src: "./songs/29.mp3" }
 ];
 
-let currentIndex = 3; // Inicia en REAL GANGSTA LOVE (Pista 4)
+let currentIndex = 0; // Inicia en la canción 1 ("CON EL COMBO")
 
 const audio = document.getElementById("audio-player");
 const trackTitle = document.getElementById("player-track-title");
@@ -68,6 +68,7 @@ function renderList() {
       ` : ''}
     `;
 
+        // Cambio instantáneo al hacer clic
         btn.onclick = () => playSong(idx);
 
         if (idx < 15) {
@@ -81,37 +82,52 @@ function renderList() {
 function playSong(index) {
     currentIndex = index;
     const song = songs[currentIndex];
+
+    // 1. Actualizar interfaz inmediatamente (se pone amarillo al instante)
     trackTitle.textContent = song.title;
     trackNum.textContent = song.id;
+    btnPlay.textContent = "▶";
+    renderList();
 
+    // 2. Cargar audio
+    console.log("Intentando reproducir:", song.src);
     audio.src = song.src;
+    audio.load();
+
+    // 3. Reproducir
     audio.play()
         .then(() => {
             btnPlay.textContent = "❚❚";
-            renderList();
+            renderList(); // Muestra el ecualizador al sonar
         })
         .catch((err) => {
-            console.log("Esperando interacción o archivo no encontrado:", err);
+            console.warn("No se pudo reproducir el archivo:", song.src, err.message);
             btnPlay.textContent = "▶";
             renderList();
         });
 }
 
-// Botón Play/Pausa
+// Botón Play / Pausa
 btnPlay.onclick = () => {
-    if (!audio.src) {
+    if (!audio.src || audio.src === window.location.href) {
         playSong(currentIndex);
         return;
     }
 
     if (audio.paused) {
-        audio.play();
-        btnPlay.textContent = "❚❚";
+        audio.play()
+            .then(() => {
+                btnPlay.textContent = "❚❚";
+                renderList();
+            })
+            .catch((err) => {
+                console.warn("Error al dar play:", err);
+            });
     } else {
         audio.pause();
         btnPlay.textContent = "▶";
+        renderList();
     }
-    renderList();
 };
 
 btnPrev.onclick = () => {
@@ -124,21 +140,26 @@ btnNext.onclick = () => {
     playSong(next);
 };
 
-// Pasar automáticamente al terminar la canción
+// Pasar a la siguiente automáticamente al terminar
 audio.onended = () => {
     btnNext.click();
 };
 
 // Barra de progreso
 audio.ontimeupdate = () => {
-    if (audio.duration) {
+    if (audio.duration && progressBar) {
         const progress = (audio.currentTime / audio.duration) * 100;
         progressBar.style.width = `${progress}%`;
     }
 };
 
-// Estado inicial
+// Evento por si el archivo no se encuentra
+audio.onerror = () => {
+    console.error("Error 404: No se encontró el archivo en la ruta:", audio.src);
+    alert("No se encontró el archivo de audio: " + songs[currentIndex].src + "\nRevisa que el archivo esté en la carpeta songs/ y con el nombre 01.mp3");
+};
+
+// Cargar estado inicial
 trackTitle.textContent = songs[currentIndex].title;
 trackNum.textContent = songs[currentIndex].id;
-audio.src = songs[currentIndex].src;
 renderList();
