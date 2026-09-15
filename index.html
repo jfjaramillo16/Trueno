@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRUENO | Turr4zo World Tour</title>
+    <!-- Tipografías urbanas oficiales del poster -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&display=swap"
@@ -23,7 +24,7 @@
             <p class="poster-subtitle">TURR4ZO WORLD TOUR</p>
         </header>
 
-        <!-- Setlist -->
+        <!-- Cuerpo del Setlist -->
         <div class="setlist-container">
 
             <!-- Columna Izquierda (1-15) -->
@@ -51,36 +52,30 @@
         </footer>
     </main>
 
-    <!-- Modal / Mini Player de YouTube Flotante -->
-    <div id="video-modal" class="video-modal hidden">
-        <div class="video-modal-content">
-            <div class="modal-top">
-                <div class="modal-info">
-                    <span id="modal-track-num" class="badge">04</span>
-                    <div>
-                        <h3 id="modal-track-title">REAL GANGSTA LOVE</h3>
-                        <span class="live-tag">OFICIAL EN YOUTUBE</span>
-                    </div>
-                </div>
-                <div class="modal-actions">
-                    <a id="btn-external-yt" href="#" target="_blank" rel="noopener noreferrer" class="btn-yt-icon"
-                        title="Abrir en YouTube">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path
-                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                        </svg>
-                    </a>
-                    <button id="close-modal" class="btn-close" title="Cerrar">&times;</button>
-                </div>
-            </div>
-
-            <!-- Marco Iframe de YouTube -->
-            <div class="video-responsive">
-                <iframe id="yt-iframe" src="" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+    <!-- Barra Reproductor Flotante Inferior -->
+    <div class="floating-player">
+        <div class="player-info">
+            <div id="track-number" class="badge">4</div>
+            <div class="meta">
+                <strong id="track-title">REAL GANGSTA LOVE</strong>
+                <small>Trueno • Turr4zo World Tour</small>
             </div>
         </div>
+
+        <!-- Controles -->
+        <div class="player-controls">
+            <button id="btn-prev" class="btn-ctrl" title="Anterior">⏮</button>
+            <button id="btn-play" class="btn-play" title="Reproducir">▶</button>
+            <button id="btn-next" class="btn-ctrl" title="Siguiente">⏭</button>
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="progress-bar-wrapper">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <!-- Elemento Audio Oculto -->
+        <audio id="audio-player"></audio>
     </div>
 
     <script src="app.js"></script>
