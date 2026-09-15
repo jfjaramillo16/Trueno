@@ -18,7 +18,7 @@ const playlist = [
     { id: 16, title: "ZOMBI", file: "songs/16.mp3" },
     { id: 17, title: "DELIVERY FREESTYLE", file: "songs/17.mp3" },
     { id: 18, title: "ARGENTINA", file: "songs/18.mp3" },
-    { id: 19, title: "PUMAS", file: "songs/19.mp3" },
+    { id: 19, title: "PUMAS (Favorita de la Xio c:)", file: "songs/19.mp3" },
     { id: 20, title: "TIERRA ZANTA", file: "songs/20.mp3" },
     { id: 21, title: "Azul y Oro", file: "songs/21.mp3" },
     { id: 22, title: "URUGUAY", file: "songs/22.mp3" },
