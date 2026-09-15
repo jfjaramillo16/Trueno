@@ -1,69 +1,73 @@
-// Setlist Oficial del Turr4zo Tour con enlaces e IDs de YouTube
-const playlist = [
-    { id: 1, title: "CON EL COMBO", ytId: "Ett9Opd_M6k", ytUrl: "https://www.youtube.com/watch?v=Ett9Opd_M6k" },
-    { id: 2, title: "Atrevido", ytId: "VOehRh_gMc0", ytUrl: "https://www.youtube.com/watch?v=VOehRh_gMc0" },
-    { id: 3, title: "Bzrp Freestyle Sessions", ytId: "Cepdo2GOQZc", ytUrl: "https://www.youtube.com/watch?v=Cepdo2GOQZc" },
-    { id: 4, title: "REAL GANGSTA LOVE", ytId: "FCMtx6IRyYY", ytUrl: "https://www.youtube.com/watch?v=FCMtx6IRyYY" },
-    { id: 5, title: "1000 HORAS", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+1000+Horas" },
-    { id: 6, title: "Mamichula", ytId: "vkcmkw0-JTo", ytUrl: "https://www.youtube.com/watch?v=vkcmkw0-JTo" },
-    { id: 7, title: "RAIN IV", ytId: "wW3S9qPXdjI", ytUrl: "https://www.youtube.com/watch?v=wW3S9qPXdjI" },
-    { id: 8, title: "FEEL ME??", ytId: "Vk94xwl7HnA", ytUrl: "https://www.youtube.com/watch?v=Vk94xwl7HnA" },
-    { id: 9, title: "GRILLZ", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+GRILLZ" },
-    { id: 10, title: "FRESH", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+FRESH" },
-    { id: 11, title: "90s", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+90s" },
-    { id: 12, title: "ESTILO SUDAKA", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+ESTILO+SUDAKA" },
-    { id: 13, title: "TRANKY FUNKY", ytId: "9lTY3JqpY9g", ytUrl: "https://www.youtube.com/watch?v=9lTY3JqpY9g" },
-    { id: 14, title: "THE ROOF IS ON FIRE", ytId: "nbC073teGbY", ytUrl: "https://www.youtube.com/watch?v=nbC073teGbY" },
-    { id: 15, title: "PITY IN THE SKY", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+PITY+IN+THE+SKY" },
-    { id: 16, title: "ZOMBI", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+ZOMBI" },
-    { id: 17, title: "DELIVERY FREESTYLE", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+DELIVERY+FREESTYLE" },
-    { id: 18, title: "ARGENTINA", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+ARGENTINA" },
-    { id: 19, title: "PUMAS", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+PUMAS" },
-    { id: 20, title: "TIERRA ZANTA", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+TIERRA+ZANTA" },
-    { id: 21, title: "Azul y Oro", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+Azul+y+Oro" },
-    { id: 22, title: "URUGUAY", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+URUGUAY" },
-    { id: 23, title: "X UNAS LLANTAS", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+X+UNAS+LLANTAS" },
-    { id: 24, title: "Ñeri", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+Neri" },
-    { id: 25, title: "BAILANDO SOLA", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+BAILANDO+SOLA" },
-    { id: 26, title: "TURRAZO", ytId: "L2o7rdaWZY4", ytUrl: "https://www.youtube.com/watch?v=L2o7rdaWZY4" },
-    { id: 27, title: "FUCK EL POLICE", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+FUCK+EL+POLICE" },
-    { id: 28, title: "VIOLENTO", ytId: null, ytUrl: "https://www.youtube.com/results?search_query=Trueno+VIOLENTO" },
-    { id: 29, title: "DANCE CRIP", ytId: "gjt-hgr1GMc", ytUrl: "https://www.youtube.com/watch?v=gjt-hgr1GMc" }
+// Setlist Oficial del Concierto con enlaces directos a YouTube
+const songs = [
+    { id: 1, title: "CON EL COMBO", yt: "https://www.youtube.com/watch?v=Ett9Opd_M6k" },
+    { id: 2, title: "Atrevido", yt: "https://www.youtube.com/watch?v=VOehRh_gMc0" },
+    { id: 3, title: "Bzrp Freestyle Sessions", yt: "https://www.youtube.com/watch?v=Cepdo2GOQZc" },
+    { id: 4, title: "REAL GANGSTA LOVE", yt: "https://www.youtube.com/watch?v=FCMtx6IRyYY" },
+    { id: 5, title: "1000 HORAS", yt: "https://www.youtube.com/results?search_query=Trueno+1000+Horas" },
+    { id: 6, title: "Mamichula", yt: "https://www.youtube.com/watch?v=vkcmkw0-JTo" },
+    { id: 7, title: "RAIN IV", yt: "https://www.youtube.com/watch?v=wW3S9qPXdjI" },
+    { id: 8, title: "FEEL ME??", yt: "https://www.youtube.com/watch?v=Vk94xwl7HnA" },
+    { id: 9, title: "GRILLZ", yt: "https://www.youtube.com/results?search_query=Trueno+GRILLZ" },
+    { id: 10, title: "FRESH", yt: "https://www.youtube.com/results?search_query=Trueno+FRESH" },
+    { id: 11, title: "90s", yt: "https://www.youtube.com/results?search_query=Trueno+90s" },
+    { id: 12, title: "ESTILO SUDAKA", yt: "https://www.youtube.com/results?search_query=Trueno+ESTILO+SUDAKA" },
+    { id: 13, title: "TRANKY FUNKY", yt: "https://www.youtube.com/watch?v=9lTY3JqpY9g" },
+    { id: 14, title: "THE ROOF IS ON FIRE", yt: "https://www.youtube.com/watch?v=nbC073teGbY" },
+    { id: 15, title: "PITY IN THE SKY", yt: "https://www.youtube.com/results?search_query=Trueno+PITY+IN+THE+SKY" },
+    { id: 16, title: "ZOMBI", yt: "https://www.youtube.com/results?search_query=Trueno+ZOMBI" },
+    { id: 17, title: "DELIVERY FREESTYLE", yt: "https://www.youtube.com/results?search_query=Trueno+DELIVERY+FREESTYLE" },
+    { id: 18, title: "ARGENTINA", yt: "https://www.youtube.com/results?search_query=Trueno+ARGENTINA" },
+    { id: 19, title: "PUMAS", yt: "https://www.youtube.com/results?search_query=Trueno+PUMAS" },
+    { id: 20, title: "TIERRA ZANTA", yt: "https://www.youtube.com/results?search_query=Trueno+TIERRA+ZANTA" },
+    { id: 21, title: "Azul y Oro", yt: "https://www.youtube.com/results?search_query=Trueno+Azul+y+Oro" },
+    { id: 22, title: "URUGUAY", yt: "https://www.youtube.com/results?search_query=Trueno+URUGUAY" },
+    { id: 23, title: "X UNAS LLANTAS", yt: "https://www.youtube.com/results?search_query=Trueno+X+UNAS+LLANTAS" },
+    { id: 24, title: "Ñeri", yt: "https://www.youtube.com/results?search_query=Trueno+Neri" },
+    { id: 25, title: "BAILANDO SOLA", yt: "https://www.youtube.com/results?search_query=Trueno+BAILANDO+SOLA" },
+    { id: 26, title: "TURRAZO", yt: "https://www.youtube.com/watch?v=L2o7rdaWZY4" },
+    { id: 27, title: "FUCK EL POLICE", yt: "https://www.youtube.com/results?search_query=Trueno+FUCK+EL+POLICE" },
+    { id: 28, title: "VIOLENTO", yt: "https://www.youtube.com/results?search_query=Trueno+VIOLENTO" },
+    { id: 29, title: "DANCE CRIP", yt: "https://www.youtube.com/watch?v=gjt-hgr1GMc" }
 ];
 
-let activeTrackId = null;
+let currentIndex = 3; // Inicia seleccionado "REAL GANGSTA LOVE" (índice 3 = tema 4)
 
-// Elementos del DOM
-const modal = document.getElementById("video-modal");
-const closeModal = document.getElementById("close-modal");
-const iframe = document.getElementById("yt-iframe");
-const modalNum = document.getElementById("modal-track-num");
-const modalTitle = document.getElementById("modal-track-title");
-const btnYt = document.getElementById("btn-external-yt");
+const trackTitle = document.getElementById("player-track-title");
+const trackNum = document.getElementById("player-track-num");
+const btnYtPlay = document.getElementById("btn-yt-play");
+const btnPrev = document.getElementById("btn-prev");
+const btnNext = document.getElementById("btn-next");
 
-// Renderizar las dos columnas
-function renderSetlist() {
+function renderList() {
     const colLeft = document.getElementById("col-left");
     const colRight = document.getElementById("col-right");
 
     colLeft.innerHTML = "";
     colRight.innerHTML = "";
 
-    playlist.forEach((track, index) => {
-        const isActive = track.id === activeTrackId;
+    songs.forEach((song, idx) => {
+        const isCurrent = idx === currentIndex;
         const btn = document.createElement("button");
-        btn.className = `track-btn ${isActive ? "active" : ""}`;
+        btn.className = `track-item ${isCurrent ? "active" : ""}`;
+
         btn.innerHTML = `
-      <span class="track-title-wrap">
-        <span class="track-num">${track.id}.</span>
-        <span>${track.title}</span>
-      </span>
-      <span class="play-icon">▶</span>
+      <div class="track-left-info">
+        <span class="track-num">${song.id}.</span>
+        <span class="track-name">${song.title}</span>
+      </div>
+      ${isCurrent ? `
+        <div class="equalizer-wrap">
+          <span class="equalizer-bar"></span>
+          <span class="equalizer-bar"></span>
+          <span class="equalizer-bar"></span>
+        </div>
+      ` : ''}
     `;
 
-        btn.addEventListener("click", () => playSongVideo(track));
+        btn.onclick = () => selectSong(idx);
 
-        if (index < 15) {
+        if (idx < 15) {
             colLeft.appendChild(btn);
         } else {
             colRight.appendChild(btn);
@@ -71,35 +75,24 @@ function renderSetlist() {
     });
 }
 
-// Reproducir video en el modal
-function playSongVideo(track) {
-    activeTrackId = track.id;
-    renderSetlist();
-
-    modalNum.textContent = track.id < 10 ? `0${track.id}` : track.id;
-    modalTitle.textContent = track.title;
-    btnYt.href = track.ytUrl;
-
-    // Si tiene ID embebible de YouTube, cargarlo en el reproductor
-    if (track.ytId) {
-        iframe.src = `https://www.youtube-nocookie.com/embed/${track.ytId}?autoplay=1&rel=0`;
-        modal.classList.remove("hidden");
-    } else {
-        // Si es búsqueda o no tiene ID estático directo, abrir pestaña oficial
-        window.open(track.ytUrl, "_blank");
-    }
+function selectSong(index) {
+    currentIndex = index;
+    const song = songs[currentIndex];
+    trackTitle.textContent = song.title;
+    trackNum.textContent = song.id;
+    btnYtPlay.href = song.yt;
+    renderList();
 }
 
-// Cerrar modal
-function stopAndCloseModal() {
-    iframe.src = ""; // Detener audio/video
-    modal.classList.add("hidden");
-}
+btnPrev.onclick = () => {
+    const prev = (currentIndex - 1 + songs.length) % songs.length;
+    selectSong(prev);
+};
 
-closeModal.addEventListener("click", stopAndCloseModal);
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) stopAndCloseModal();
-});
+btnNext.onclick = () => {
+    const next = (currentIndex + 1) % songs.length;
+    selectSong(next);
+};
 
-// Inicializar lista
-renderSetlist();
+// Cargar la lista al iniciar
+renderList();
