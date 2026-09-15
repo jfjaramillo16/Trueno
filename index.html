@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <!-- Hoja de estilos externa -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -59,7 +58,7 @@
             <div id="player-track-num" class="player-badge">4</div>
             <div class="player-meta">
                 <p id="player-track-title" class="player-title">REAL GANGSTA LOVE</p>
-                <p class="player-sub">Trueno • Turr4zo World Tour</p>
+                <p id="player-status" class="player-sub">Trueno • Turr4zo World Tour</p>
             </div>
         </div>
 
@@ -71,10 +70,10 @@
                 </svg>
             </button>
 
-            <a id="btn-yt-play" href="https://www.youtube.com/watch?v=FCMtx6IRyYY" target="_blank" class="btn-play"
-                title="Reproducir en YouTube">
+            <!-- Botón Reproducir / Pausar nativo en la página -->
+            <button id="btn-play" class="btn-play" title="Reproducir">
                 ▶
-            </a>
+            </button>
 
             <button id="btn-next" class="btn-nav" title="Siguiente">
                 <svg viewBox="0 0 24 24">
@@ -84,7 +83,12 @@
         </div>
     </aside>
 
-    <!-- Lógica en JavaScript externo -->
+    <!-- Reproductor invisible de audio (Motor YouTube interno) -->
+    <div id="hidden-youtube-player"></div>
+
+    <!-- API oficial de YouTube -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- Lógica de tu aplicación -->
     <script src="app.js"></script>
 </body>
 

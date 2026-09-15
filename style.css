@@ -1,4 +1,3 @@
-/* Variables y Reset */
 :root {
     --bg-black: #000000;
     --card-start: #3a3a3a;
@@ -110,7 +109,6 @@ body {
 
 .heading-spacer {
     height: 25px;
-    /* Iguala la altura de SETLIST a la derecha */
 }
 
 .track-list {
@@ -176,7 +174,7 @@ body {
     text-overflow: ellipsis;
 }
 
-/* Barras animadas (Ecualizador) */
+/* Ecualizador animado */
 .equalizer-wrap {
     display: flex;
     align-items: flex-end;
@@ -339,13 +337,14 @@ body {
     height: 40px;
     background-color: var(--accent-yellow);
     color: #000000;
+    border: none;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
     font-size: 0.95rem;
-    text-decoration: none;
+    cursor: pointer;
     transition: transform 0.15s, background-color 0.2s;
 }
 
@@ -357,7 +356,18 @@ body {
     transform: scale(0.95);
 }
 
-/* Adaptación a celulares */
+/* Ocultar el iframe de YouTube para que funcione como motor de audio */
+#hidden-youtube-player {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
     .setlist-container {
         flex-direction: column;
