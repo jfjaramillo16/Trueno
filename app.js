@@ -40,6 +40,34 @@ const trackTitle = document.getElementById("track-title");
 const trackNumber = document.getElementById("track-number");
 const progressBar = document.getElementById("progress-bar");
 
+// Configuración de la pantalla del auto / Bluetooth
+function updateCarDisplay(track) {
+    if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+            title: track.title,                  // Texto de arriba en tu auto
+            artist: 'Trueno • Para Xio',         // Texto de abajo en tu auto (reemplaza el link)
+            album: 'Turr4zo World Tour',
+            artwork: [
+                { src: 'trueno_card.jpg', sizes: '512x512', type: 'image/jpeg' }
+            ]
+        });
+
+        // Controles desde el volante o la pantalla del carro
+        navigator.mediaSession.setActionHandler('previoustrack', () => {
+            btnPrev.click();
+        });
+        navigator.mediaSession.setActionHandler('nexttrack', () => {
+            btnNext.click();
+        });
+        navigator.mediaSession.setActionHandler('play', () => {
+            btnPlay.click();
+        });
+        navigator.mediaSession.setActionHandler('pause', () => {
+            btnPlay.click();
+        });
+    }
+}
+
 // Renderizar las 2 columnas
 function renderSetlist() {
     const colLeft = document.getElementById("col-left");
@@ -84,6 +112,9 @@ function playTrack(index) {
     trackTitle.textContent = current.title;
     trackNumber.textContent = current.id;
     audio.src = current.file;
+
+    // Enviar datos al Bluetooth del auto
+    updateCarDisplay(current);
 
     audio.play()
         .then(() => {
@@ -139,4 +170,5 @@ audio.addEventListener("timeupdate", () => {
 });
 
 // Inicialización
+updateCarDisplay(playlist[currentIndex]);
 renderSetlist();
