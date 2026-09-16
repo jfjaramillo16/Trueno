@@ -45,7 +45,7 @@ function updateCarDisplay(track) {
     if ('mediaSession' in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
             title: track.title,                  // Texto de arriba en tu auto
-            artist: 'Trueno • Para Xio',         // Texto de abajo en tu auto (reemplaza el link)
+            artist: 'Para Xio <3',         // Texto de abajo en tu auto (reemplaza el link)
             album: 'Turr4zo World Tour',
             artwork: [
                 { src: 'trueno_card.jpg', sizes: '512x512', type: 'image/jpeg' }
